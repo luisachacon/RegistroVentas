@@ -7,20 +7,20 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import com.inventario.app.models.entity.Usuario;
+import com.inventario.app.models.entity.Venta;
 
 @Repository
-public class UsuarioDaoImpl implements IUsuarioDao {
+public class VentaDaoImpl implements IVentaDao {
 
-	@PersistenceContext 
+	@PersistenceContext
 	private EntityManager em;
-	
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Usuario> findAll() {
+	public List<Venta> findAll() {
 		// TODO Auto-generated method stub
-		return em.createQuery("from Usuario").getResultList();
+		return  em.createQuery("from Venta").getResultList();
 	}
 
+	
 }
